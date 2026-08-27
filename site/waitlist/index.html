@@ -293,30 +293,30 @@
     <span class="kicker mono">First drop</span>
     <h2 class="disp">Join the waitlist.</h2>
     <p>Sign up and be the first to know when the drop opens.</p>
-    <form id="wl" action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" method="POST" target="hf" onsubmit="thanks()">
+    <form id="wl" action="https://docs.google.com/forms/d/e/1FAIpQLScN1MVs6EPyoGUtiUUB7tDPN0sWvS-0Cu8vNbm-smFQ5irGFA/formResponse" method="POST" target="hf" onsubmit="thanks()">
       <div class="fld">
         <div class="lbl"><span class="name">First name</span><span class="req opt">optional</span></div>
-        <input class="field" type="text" name="entry.FIRSTNAME_ID" placeholder="What should we call you?" aria-label="First name">
+        <input class="field" type="text" name="entry.321357615" placeholder="What should we call you?" aria-label="First name">
       </div>
       <div class="fld">
         <div class="lbl"><span class="name">Your email</span><span class="req pflicht">Required</span></div>
-        <input class="field" type="email" name="entry.EMAIL_ID" required placeholder="you@email.com" aria-label="Email">
+        <input class="field" type="email" name="entry.1785037483" required placeholder="you@email.com" aria-label="Email">
       </div>
       <div class="fld">
         <div class="lbl"><span class="name">Phone (text)</span><span class="req opt">optional</span></div>
-        <input class="field" type="tel" name="entry.PHONE_ID" inputmode="tel" autocomplete="tel" pattern="^(\+|0)[1-9][0-9]{8,14}$" title="For example +15551234567. No spaces." placeholder="+1555xxxxxxx" aria-label="Phone number in international format">
+        <input class="field" type="tel" name="entry.720187242" inputmode="tel" autocomplete="tel" pattern="^(\+|0)[1-9][0-9]{8,14}$" title="For example +15551234567. No spaces." placeholder="+1555xxxxxxx" aria-label="Phone number in international format">
       </div>
       <div class="fld">
         <div class="lbl"><span class="name">Shoe size</span><span class="req pflicht">Required</span></div>
         <fieldset class="size-options" aria-label="Shoe size">
-          <label class="size-option"><input type="radio" name="entry.SIZE_ID" value="US 4-7" required><span>US 4-7</span></label>
-          <label class="size-option"><input type="radio" name="entry.SIZE_ID" value="US 7-10"><span>US 7-10</span></label>
-          <label class="size-option"><input type="radio" name="entry.SIZE_ID" value="US 10-13"><span>US 10-13</span></label>
+          <label class="size-option"><input type="radio" name="entry.474236516" value="US 4-7" required><span>US 4-7</span></label>
+          <label class="size-option"><input type="radio" name="entry.474236516" value="US 7-10"><span>US 7-10</span></label>
+          <label class="size-option"><input type="radio" name="entry.474236516" value="US 10-13"><span>US 10-13</span></label>
         </fieldset>
       </div>
       <label class="consent">
-        <input type="checkbox" name="entry.CONSENT_ID" value="Yes, email me about Jups (first drop + waitlist). No spam, no selling your data, unsubscribe anytime." required>
-        <span>Yes, email me about Jups (first drop + waitlist). No spam, no selling your data, unsubscribe anytime. <b class="req pflicht" style="letter-spacing:.12em">Required</b></span>
+        <input type="checkbox" name="entry.1660793338" value="Yes, email me about JUPS, including the first drop and waitlist updates. No spam. We will not sell your data. Unsubscribe anytime." required>
+        <span>Yes, email me about JUPS, including the first drop and waitlist updates. No spam. We will not sell your data. Unsubscribe anytime. <b class="req pflicht" style="letter-spacing:.12em">Required</b></span>
       </label>
       <button class="btn" type="submit">Join the waitlist</button>
       <span class="micro">First drop. You first. Zero spam.</span>
@@ -345,7 +345,7 @@
 <script>
   // English validation messages
   document.addEventListener('DOMContentLoaded', function(){
-    var phone = document.querySelector('input[name="entry.PHONE_ID"]');
+    var phone = document.querySelector('input[name="entry.720187242"]');
     if(phone){
       var validatePhone = function(){
         phone.setCustomValidity(phone.value && phone.validity.patternMismatch ? 'Please enter a valid number, e.g. +15551234567.' : '');
@@ -355,7 +355,7 @@
       phone.oninvalid = validatePhone;
       validatePhone();
     }
-    var email = document.querySelector('input[name="entry.EMAIL_ID"]');
+    var email = document.querySelector('input[name="entry.1785037483"]');
     if(email){
       var validateEmail = function(){
         email.setCustomValidity(!email.value ? 'Please enter your email.' : (email.validity.typeMismatch ? 'Please enter a valid email address.' : ''));
@@ -365,16 +365,16 @@
       email.oninvalid = validateEmail;
       validateEmail();
     }
-    var sizes = document.querySelectorAll('input[name="entry.SIZE_ID"]');
+    var sizes = document.querySelectorAll('input[name="entry.474236516"]');
     if(sizes.length){
       var validateSizes = function(){
-        sizes[0].setCustomValidity(document.querySelector('input[name="entry.SIZE_ID"]:checked') ? '' : 'Please pick your shoe size.');
+        sizes[0].setCustomValidity(document.querySelector('input[name="entry.474236516"]:checked') ? '' : 'Please pick your shoe size.');
       };
       sizes[0].oninvalid = validateSizes;
       sizes.forEach(function(size){ size.onchange = validateSizes; });
       validateSizes();
     }
-    var consent = document.querySelector('input[name="entry.CONSENT_ID"]');
+    var consent = document.querySelector('input[name="entry.1660793338"]');
     if(consent){
       var validateConsent = function(){ consent.setCustomValidity(consent.checked ? '' : 'Please tick this box.'); };
       consent.oninvalid = validateConsent;
